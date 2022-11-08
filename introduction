@@ -1,0 +1,3 @@
+In this project i have assumed that vending machine will contain single type of object(price Rs 15 of each object) .
+It accept only two type of coin Rs 5 or Rs 10.
+It give output when we give Rs 15 or more in total. It also return back the change if money entered is more or not sufficient to buy that object.
