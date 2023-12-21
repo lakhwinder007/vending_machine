@@ -43,9 +43,9 @@ always@(posedge clk)
     s1:   // state 1 ,5Rs
     if(in==0)
     begin
-        n_state=s0;
+        n_state=s0;                  // update n_state= s1
         out=0;
-        change=2'b01;
+        change=2'b01;              //  update: change  this to { change = 2'b00 } as machine will come to ideal state only when timeout is over. 
     end
     else if(in==2'b01)
     begin
@@ -62,9 +62,9 @@ always@(posedge clk)
     s2:
     if(in==0)
     begin
-        n_state=s0;
+        n_state=s0;      //   update n_state= s2
         out=0;
-        change=2'b10;
+        change=2'b10;       //  update: change  this to { change = 2'b00 } as machine will come to ideal state only when timeout is over.
     end
     else if(in==2'b01)
     begin
@@ -84,3 +84,4 @@ always@(posedge clk)
 
 endmodule
 
+// in == 2'b11 is not allowed as machine will discard the simultaneous insertion of two or more coins.
